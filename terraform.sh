@@ -19,11 +19,11 @@ command -v unzip >/dev/null 2>&1 || { echo >&2 "I require unzip but it's not ins
 
 # download terraform
 cd /tmp
-wget $ENLACE
+wget $LINK
 
 # install terraform
 unzip $ZIP
 sudo mv terraform /usr/local/bin/
 
 # remove terraform.zip
-rm $ZiP
+rm $ZIP
