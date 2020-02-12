@@ -4,7 +4,7 @@
 # Version	:	1.1
 # Author	:	vekio
 # Purpose	:	install terraform (linux 64-bit)
-# Comments	:	Upgrade to version 0.12.20
+# Comments	:	upgrade to version 0.12.20
 #               https://www.terraform.io/downloads.html
 ##################################################################################################################
 
