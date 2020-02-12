@@ -3,9 +3,12 @@
 ##################################################################################################################
 # Version	:	1.0
 # Author	:	vekio
-# Purpose	:	generate ssh key and save it in my keybase account
-# Comments	:	gives the option to create a profile in ssh/config and the option to upload 
-#               the public key to the server
+# Purpose	:	this script generate ssh key and it save it in my keybase account, also create a profile in
+#               ssh/config and upload the public key to the server
+# Comments	:	
+#
+# NOT TESTED YET
+#
 ##################################################################################################################
 
 # variables
@@ -13,15 +16,16 @@ COMMENT=""          # profile comment
 FNAME=""            # file name
 HNAME=""            # host name
 HIP=""              # host IP or URL
+USERNAME=""         # server's usename
 
 # first run keybase
 run_keybase
 
 # generate ssh key
-ssh-keygen -f /keybase/private/vekio/keys/$FNAME -t rsa -b 4096 -C ""
-
-# generate .ssh/config profile
-echo -e "# $COMMENT\n\tHost $HNAME\n\tHostName $HIP\n\tUser $USER\n\tIdentifyFile /keybase/private/vekio/keys/$FNAME" | sudo tee -a $HOME/.ssh/config
+ssh-keygen -f /keybase/private/vekio/keys/$FNAME -t rsa -b 4096 -C "" -N ''
 
 # upload the public key to the server
-ssh-copy-id -i /keybase/private/vekio/keys/$FNAME $USER@$HIP
+ssh-copy-id -i /keybase/private/vekio/keys/$FNAME.pub $USERNAME@$HIP 
+
+# generate .ssh/config profile
+echo -e "# $COMMENT\n  Host $HNAME\n  HostName $HIP\n  User $USERNAME\n  IdentifyFile /keybase/private/vekio/keys/$FNAME" | tee -a $HOME/.ssh/config
