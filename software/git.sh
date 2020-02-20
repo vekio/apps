@@ -1,22 +1,18 @@
 #!/bin/bash
-
+#
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	install git and set global config
-# Comments	:	
+# Name			:	git.sh
+# Author		:	vekio
+# Description	:	install git and set up global config
+# Notes			:	ubuntu/debian systems
 ##################################################################################################################
-
-# global config
-NAME=""
-EMAIL=""
 
 # update the package lists
-sudo apt update
+sudo apt-get update
 
 # install git
 sudo apt install -y git
 
 # git global config
-git config --global user.name $NAME
-git config --global user.email $EMAIL
+git config --global user.name vekio
+git config --global user.email albertocasta@protonmail.com

@@ -1,14 +1,14 @@
 #!/bin/bash
-
+#
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	install tmux
-# Comments	:	cheatsheet http://atkinsam.com/documents/tmux.pdf
+# Name			:	unzip.sh
+# Author		:	vekio
+# Description	:	install unzip
+# Notes			:	
 ##################################################################################################################
 
 # update the package lists
-sudo apt update
+sudo apt-get update
 
-# install tmux
-sudo apt install -y tmux
+# install unzip
+sudo apt-get install -y unzip

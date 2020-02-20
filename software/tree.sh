@@ -1,14 +1,14 @@
 #!/bin/bash
-
+#
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	install unzip
-# Comments	:	
+# Name			:	tree.sh
+# Author		:	vekio
+# Description	:	install tree
+# Notes			:	
 ##################################################################################################################
 
 # update the package lists
-sudo apt update
+sudo apt-get update
 
-# install unzip
-sudo apt install -y unzip
+# install tree
+sudo apt-get install -y tree
