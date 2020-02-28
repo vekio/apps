@@ -1,0 +1,24 @@
+api:
+  dashboard: true
+
+entryPoints:
+  http:
+    address: :80
+  https:
+    address: :443
+
+providers:
+  docker:
+    endpoint: unix:///var/run/docker.sock
+    exposedByDefault: false
+  file:
+    filename: config.yml
+
+certificatesResolvers:
+  doresolver:
+    acme:
+      email: albertocasta@protonmail.com
+      storage: acme.json
+      dnsChallenge:
+        provider: digitalocean
+        delayBeforeCheck: 0
