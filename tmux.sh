@@ -1,14 +1,15 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Name			:	unzip.sh
-# Author		:	vekio
-# Description	:	install unzip
-# Notes			:	
+# Name         :  tmux.sh
+# Author       :  vekio
+# Description  :  install tmux
+# Notes        :  
 ##################################################################################################################
 
 # update the package lists
-sudo apt-get update
+sudo apt update
 
-# install unzip
-sudo apt-get install -y unzip
+# install tmux
+sudo apt install -y tmux
+

@@ -1,7 +1,0 @@
-.env variables
-
-USER=
-PASSWORD=
-DO_API_KEY=
-DOMAIN=
-DATA=

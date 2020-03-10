@@ -1,18 +1,21 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Name			:	docker.sh
-# Author		:	vekio
-# Description	:	install docker on ubuntu
-# Notes			:	https://docs.docker.com/install/linux/docker-ce/debian/
-#					https://docs.docker.com/compose/install/
+# Name         :  docker.sh
+# Author       :  vekio
+# Description  :  install docker on ubuntu
+# Notes        :  https://docs.docker.com/install/linux/docker-ce/debian/
+#                 https://docs.docker.com/compose/install/
 ##################################################################################################################
 
+# remove previous docker installation
+sudo apt remove docker docker-engine docker.io containerd runc
+
 # update the package lists
-sudo apt-get update
+sudo apt update
 
 # requirements
-sudo apt-get install -y \
+sudo apt install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -29,13 +32,9 @@ sudo add-apt-repository \
    stable"
 
 # update package index
-sudo apt-get update
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 # allow your user to access the docker cli without needing root access
 sudo usermod -aG docker alberto
 
-sudo apt-get install -y python3 python3-pip
-
-# install docker-compose using python3 and pip3
-sudo pip3 install docker-compose

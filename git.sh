@@ -1,17 +1,19 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Name			:	vim.sh
-# Author		:	vekio
-# Description	:	install vim and set up my personal config
-# Notes			:	
+# Name         :  git.sh
+# Author       :  vekio
+# Description  :  install git and set up global config
+# Notes        :  
 ##################################################################################################################
 
 # update the package lists
-sudo apt-get update
+sudo apt update
 
 # install git
-sudo apt-get install -y vim
+sudo apt install -y git
 
-# download my .vimrc
-wget -O ~/.vimrc https://raw.githubusercontent.com/vekio/dotfiles/master/.vimrc
+# git global config
+git config --global user.name vekio
+git config --global user.email albertocasta@protonmail.com
+

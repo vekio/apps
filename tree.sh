@@ -1,14 +1,15 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Name			:	tmux.sh
-# Author		:	vekio
-# Description	:	install tmux
-# Notes			:	
+# Name         :  tree.sh
+# Author       :  vekio
+# Description  :  install tree
+# Notes        :  
 ##################################################################################################################
 
 # update the package lists
-sudo apt-get update
+sudo apt update
 
-# install tmux
-sudo apt-get install -y tmux
+# install tree
+sudo apt install -y tree
+

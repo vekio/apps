@@ -1,14 +1,15 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Name			:	tree.sh
-# Author		:	vekio
-# Description	:	install tree
-# Notes			:	
+# Name         :  htpasswd.sh
+# Author       :  vekio
+# Description  :  install htpasswd
+# Notes        :  
 ##################################################################################################################
 
 # update the package lists
-sudo apt-get update
+sudo apt update
 
-# install tree
-sudo apt-get install -y tree
+# install httpasswd
+sudo apt install -y apache2-utils
+

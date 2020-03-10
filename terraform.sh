@@ -1,15 +1,14 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Name			:	terraform.sh
-# Author		:	vekio
-# Description	:	install terraform, manage existing and popular service providers
-# Notes			:	latest version v0.12.20
-#					https://www.terraform.io/downloads.html
+# Name         :  terraform.sh
+# Author       :  vekio
+# Description  :  install terraform, manage existing and popular service providers
+# Notes        :  https://www.terraform.io/downloads.html
 ##################################################################################################################
 
-# download link
-LINK=https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linux_amd64.zip
+VERSION=0.12.23
+LINK=https://releases.hashicorp.com/terraform/$VERSION/terraform_$VERSION_linux_amd64.zip
 
 # zip file name
 ZIP=$(echo "${LINK##*/}")
@@ -25,3 +24,4 @@ wget $LINK
 unzip $ZIP
 sudo mv terraform /usr/local/bin/
 rm $ZIP
+

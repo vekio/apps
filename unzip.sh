@@ -1,14 +1,15 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Name			:	htpasswd.sh
-# Author		:	vekio
-# Description	:	install htpasswd
-# Notes			:	
+# Name         :  unzip.sh
+# Author       :  vekio
+# Description  :  install unzip
+# Notes        :  
 ##################################################################################################################
 
 # update the package lists
-sudo apt-get update
+sudo apt update
 
-# install httpasswd
-sudo apt-get install -y apache2-utils
+# install unzip
+sudo apt install -y unzip
+
