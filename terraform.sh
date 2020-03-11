@@ -8,7 +8,7 @@
 ##################################################################################################################
 
 VERSION=0.12.23
-LINK=https://releases.hashicorp.com/terraform/$VERSION/terraform_$VERSION_linux_amd64.zip
+LINK=https://releases.hashicorp.com/terraform/$VERSION/terraform_$VERSION\_linux_amd64.zip
 
 # zip file name
 ZIP=$(echo "${LINK##*/}")
