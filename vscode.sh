@@ -29,3 +29,10 @@ sudo apt install -y code
 
 # remove gpg
 remove ~/microsoft.gpg
+
+# install my snippets
+wget -O ~/.config/Code/User/snippets/c.json https://raw.githubusercontent.com/vekio/dotfiles/master/vscode/snippets/c.json
+wget -O ~/.config/Code/User/snippets/shellscript.json https://raw.githubusercontent.com/vekio/dotfiles/master/vscode/snippets/shellscript.json
+
+# install my settings
+wget -O ~/.config/Code/User/settings.json https://raw.githubusercontent.com/vekio/dotfiles/master/vscode/settings.json
