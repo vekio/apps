@@ -13,9 +13,6 @@ LINK=https://releases.hashicorp.com/terraform/$VERSION/terraform_$VERSION\_linux
 # zip file name
 ZIP=$(echo "${LINK##*/}")
 
-# requirements: unzip
-command -v unzip >/dev/null 2>&1 || { echo >&2 "I require unzip but it's not installed. Aborting."; exit 1; }
-
 # download terraform
 cd /tmp
 wget $LINK
