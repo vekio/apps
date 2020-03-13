@@ -8,18 +8,20 @@
 # Notes        :  
 ##################################################################################################################
 
+KEYBASE_FOLDER=
 HOSTNAME=
-HOSTIP=
-SSHPORT=
+IP=
+PORT=
+USER=
 
 # generate ssh key
-ssh-keygen -f /keybase/private/vekio/keys/$HOSTNAME -t rsa -b 4096 -C "" -N ''
+ssh-keygen -f $KEYBASE_FOLDER/$HOSTNAME -t rsa -b 4096 -C "" -N ''
 
 # remove the know host
-ssh-keygen -f "/home/alberto/.ssh/known_hosts" -R "$HOSTIP"
+ssh-keygen -f "~/.ssh/known_hosts" -R "$IP"
 
 # upload the public key to the raspberrypi
-ssh-copy-id -i /keybase/private/vekio/keys/$HOSTNAME.pub alberto@$HOSTIP
+ssh-copy-id -i $KEYBASE_FOLDER/$HOSTNAME.pub $USER@$IP
 
 # generate .ssh/config profile
-echo -e "# $HOSTNAME\nHost $HOSTNAME\n  HostName $HOSTIP\n  Port $PORT\n  User alberto\n  IdentityFile /keybase/private/vekio/keys/$HOSTNAME" | tee -a /home/alberto/.ssh/config
+echo -e "# $HOSTNAME\nHost $HOSTNAME\n  HostName $IP\n  Port $SSHPORT\n  User $USER\n  IdentityFile $KEYBASE_FOLDER/$HOSTNAME" | tee -a ~/.ssh/config
