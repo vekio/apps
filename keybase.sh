@@ -16,3 +16,5 @@ sudo apt install -y ./keybase_amd64.deb
 # run keybase app
 run_keybase
 
+# rm .deb
+rm keybase_amd64.deb
