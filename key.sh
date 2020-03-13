@@ -23,4 +23,3 @@ ssh-copy-id -i /keybase/private/vekio/keys/$HOSTNAME.pub alberto@$HOSTIP
 
 # generate .ssh/config profile
 echo -e "# $HOSTNAME\nHost $HOSTNAME\n  HostName $HOSTIP\n  Port $PORT\n  User alberto\n  IdentityFile /keybase/private/vekio/keys/$HOSTNAME" | tee -a /home/alberto/.ssh/config
-

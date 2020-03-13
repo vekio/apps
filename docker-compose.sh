@@ -15,4 +15,3 @@ sudo curl -L "https://github.com/docker/compose/releases/download/$VERSION/docke
 
 # give the execution permissions
 sudo chmod +x /usr/local/bin/docker-compose
-

@@ -29,4 +29,3 @@ sudo apt install -y code
 
 # remove gpg
 remove ~/microsoft.gpg
-

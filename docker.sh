@@ -36,5 +36,4 @@ sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 # allow your user to access the docker cli without needing root access
-sudo usermod -aG docker alberto
-
+sudo usermod -aG docker $USER

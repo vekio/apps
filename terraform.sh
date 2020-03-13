@@ -21,4 +21,3 @@ wget $LINK
 unzip $ZIP
 sudo mv terraform /usr/local/bin/
 rm $ZIP
-

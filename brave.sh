@@ -21,4 +21,3 @@ sudo apt update
 
 # install brave
 sudo apt install brave-browser
-

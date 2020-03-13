@@ -15,4 +15,3 @@ sudo apt install -y vim
 
 # download my .vimrc
 wget -O ~/.vimrc https://raw.githubusercontent.com/vekio/dotfiles/master/.vimrc
-

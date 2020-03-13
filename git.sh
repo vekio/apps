@@ -16,4 +16,3 @@ sudo apt install -y git
 # git global config
 git config --global user.name vekio
 git config --global user.email albertocasta@protonmail.com
-

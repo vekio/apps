@@ -16,4 +16,3 @@ sudo apt update
 
 # install spotify client
 sudo apt install -y spotify-client
-
