@@ -9,5 +9,6 @@ bash /tmp/Miniconda3-latest-Linux-x86_64.sh
 
 rm /tmp/Miniconda3-latest-Linux-x86_64.sh
 
-# Hide environment 
+# Hide auto environment base
+source ~/.bashrc
 conda config --set auto_activate_base false
